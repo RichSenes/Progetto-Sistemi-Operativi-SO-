@@ -76,6 +76,22 @@ void draw_plant (int x, int y) {
 
 // Funzione per disegnare un proiettile sulla griglia
 void draw_bullet (int x, int y) {
+    // disegno del proiettile
+    char *bullet [] = {
+        " ____",
+        "|____| ",
+        "||  || ",
+        "||  || ",
+        "\\\\  // ",
+        " \\\\// ",
+        "  \\/"
+    };
+
+    int i;
+    int bullet_height = sizeof(bullet)/sizeof(bullet[0]);
+
     // disegna un proiettile nella posizione specifica
-    mvprintw(y, x, "o");
+    for(i = 0; i < bullet_height; i++) {
+        mvprintw(x+i, y, "%s", bullet[i]);
+    }
 }

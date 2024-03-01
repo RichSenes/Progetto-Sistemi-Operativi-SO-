@@ -13,7 +13,7 @@ int main () {
     draw_frog(5, 5);
     draw_crocodile(20, 20);
     //draw_plant(15, 15);
-    //draw_bullet(20, 20);
+    draw_bullet(15, 15);
 
     // Aggiorna lo schermo
     refresh();
