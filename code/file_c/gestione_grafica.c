@@ -18,15 +18,30 @@ void draw_grid () {
     for (int i = 0; i < GRID_DIM_X; ++i) {
         for (int j = 0; j < GRID_DIM_Y; ++j) {
             // disegna un quadrato per ogni cella della griglia
-            mvprintw (j, i, "[]");
+            mvprintw (j, i, " ");
         }
     }
 }
 
 // Funzione per disegnare la rana sulla griglia
 void draw_frog (int x, int y) {
+    // disegno della rana
+    char *frog [] = {
+        "            _     _" ,
+        "           (')-=-(') " ,
+        "         __(   '   )__ " ,
+        "        / _|'-----'|_ \\ " ,
+        "     ___\\\\ \\\\     // //___ " ,
+        "     >____)|_|---|_|(____< "
+    };
+
+    int i;
+    int frog_height = sizeof(frog)/sizeof(frog[0]);
+
     // disegna la rana nella posizione specifica
-    mvprintw(y, x, "R");
+    for(i = 0; i < frog_height; i++) {
+        mvprintw(x+i, y, "%s", frog[i]);
+    }
 }
 
 // Funzione per disegnare un coccodrillo sulla griglia
