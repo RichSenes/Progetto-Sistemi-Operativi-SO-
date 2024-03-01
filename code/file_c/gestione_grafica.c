@@ -46,8 +46,26 @@ void draw_frog (int x, int y) {
 
 // Funzione per disegnare un coccodrillo sulla griglia
 void draw_crocodile (int x, int y) {
+    // disegno del coccodrillo
+    char *crocodile [] = {
+        "            .-._   _ _ _ _ _ _ _ _ ",
+        " .-''-.__.-'00  '-' ' ' ' ' ' ' ' '-. ",
+        "'.___ '    .   .--_'-' '-' '-' _'-' '._ ",
+        " V: V 'vv-'   '_   '.       .'  _..' '.'. ",
+        "   '=.____.=_.--'   :_.__.__:_   '.   : : ",
+        "           (((____.-'        '-.  /   : : ",
+        "                             (((-'\\ .' / ",
+        "                           _____..'  .' ",
+        "                          '-._____.-' "
+    };
+
+    int i;
+    int crocodile_height = sizeof(crocodile)/sizeof(crocodile[0]);
+
     // disegna un coccodrillo nella posizione specifica
-    mvprintw(y, x, "C");
+    for(i = 0; i < crocodile_height; i++) {
+        mvprintw(x+i, y, "%s", crocodile[i]);
+    }
 }
 
 // Funzione per disegnare una pianta sulla griglia

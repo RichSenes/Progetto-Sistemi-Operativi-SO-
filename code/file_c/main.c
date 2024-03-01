@@ -11,7 +11,7 @@ int main () {
     // Prova di disegno degli elementi grafici
     draw_grid();
     draw_frog(5, 5);
-    //draw_crocodile(10, 10);
+    draw_crocodile(20, 20);
     //draw_plant(15, 15);
     //draw_bullet(20, 20);
 

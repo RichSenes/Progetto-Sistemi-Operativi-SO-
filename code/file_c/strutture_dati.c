@@ -33,8 +33,8 @@ struct Bullet {
 };
 
 // Struttura rappresentante la griglia di gioco
-#define GRID_DIM_X 80 // dimensione della griglia - asse x
-#define GRID_DIM_Y 50 // dimensione della griglia - asse y
+#define GRID_DIM_X 180 // dimensione della griglia - asse x
+#define GRID_DIM_Y 150 // dimensione della griglia - asse y
 struct Grid {
     // matrice bidimensionale di caratteri per la griglia di gioco
     char cells[GRID_DIM_X] [GRID_DIM_Y];
