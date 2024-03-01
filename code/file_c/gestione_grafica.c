@@ -70,8 +70,26 @@ void draw_crocodile (int x, int y) {
 
 // Funzione per disegnare una pianta sulla griglia
 void draw_plant (int x, int y) {
+    // disegno della pianta
+    char *plant [] = {
+        "               __/) ",
+        "            .-(__(=: ",
+        "            |    \\) ",
+        "      (\\__  | ",
+        "     :=)__)-|  __/) ",
+        "      (/    |-(__(=: ",
+        "    ______  |  _ \\) ",
+        "   /      \\ | / \\ ",
+        "        ___\\|/___\\ "
+    };
+
+    int i;
+    int plant_height = sizeof(plant)/sizeof(plant[0]);
+
     // disegna una pianta nella posizione specifica
-    mvprintw(y, x, "P");
+    for(i = 0; i < plant_height; i++) {
+        mvprintw(x+i, y, "%s", plant[i]);
+    }
 }
 
 // Funzione per disegnare un proiettile sulla griglia
