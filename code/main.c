@@ -6,18 +6,20 @@
 
 int main () {
     // Salvataggio delle dimensioni attuali del font
-    char *initialDPI = getFontDimensions();
+    // char *initialDPI = getFontDimensions(); [SEGMENTATION FAULT]
 
     // Modifica delle impostazioni di sistema per le dimensioni del font
-    system("gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 3'");
+    // Cambia le dimensioni del font solo del terminale da cui si esegue
+    system("gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 4'");
+
+    // Scala le dimensioni del font in generale (ovunque) (direi che non va bene)
+    //system("gsettings set org.gnome.desktop.interface text-scaling-factor 0.5");
 
     // Inizializza ncurses
     init_ncurses();
 
-    resize_term(LINES, COLS);   // imposta la finestra a schermo intero
-
     // Prova di disegno degli elementi grafici
-    draw_grid();
+    draw_border();
     draw_frog(5, 5);
     draw_crocodile(20, 40);
     draw_plant(5, 35);
@@ -30,11 +32,14 @@ int main () {
     while (getch() != 'e') { }
 
     // Termina ncurses
+    clear();
     endwin();
 
     // Ridimensionamento delle dimensioni del font
-    updateFontDimensions(initialDPI);
-    free(initialDPI);
+    // updateFontDimensions(initialDPI);
+    // free(initialDPI);
+
+    system("gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 10'");
 
     return 0;
 }

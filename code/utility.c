@@ -1,9 +1,8 @@
-
-
 #include <ncurses.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <curses.h>
 
 #define MAX_BUFFER_SIZE 1024
 
@@ -14,6 +13,9 @@ void init_ncurses () {
     noecho();                   // non mostrare i caratteri digitati dall'utente
     curs_set(0);                // nascondi il cursore
     keypad(stdscr, TRUE);       // abilita la lettura dei tasti speciali (es. frecce)
+
+    resize_term(LINES * 2.3, COLS * 2.3);   // effettua il resize della finestra
+    refresh();
 }
 
 char *getFontDimensions () {
@@ -69,3 +71,4 @@ void updateFontDimensions () {
         free(result);
     }
 }
+

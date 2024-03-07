@@ -2,16 +2,8 @@
 // dei personaggi, degli oggetti e della schermata di gioco.
 
 #include <ncurses.h>
-#include "strutture_dati.c"
-
-// Funzione per inizializzare la finestra di ncurses
-void init_ncurses () {
-    initscr();              // inizializza la finestra ncurses
-    cbreak();               // disabilita il buffering della finestra (legge un carattere alla volta)
-    noecho();               // non mostrare i caratteri digitati dall'utente
-    curs_set(0);            // nascondi il cursore
-    keypad(stdscr, TRUE);   // abilita la lettura dei tasti speciali (es. frecce)
-}
+#include <curses.h>
+#include "strutture_dati.h"
 
 // Funzione per disegnare la griglia di gioco
 void draw_grid () {
@@ -112,4 +104,34 @@ void draw_bullet (int x, int y) {
     for(i = 0; i < bullet_height; i++) {
         mvprintw(x+i, y, "%s", bullet[i]);
     }
+}
+
+// Funzione per disegnare il bordo
+void draw_border () {
+    int x, y, maxX, maxY;
+
+    // Ottieni le dimensioni della finestra corrente
+    getmaxyx(stdscr, maxY, maxX);
+
+    // Disegna il bordo superiore
+    mvhline(0, 0, '-', maxX);
+
+    // Disegna il bordo inferiore
+    mvhline(maxY - 1, 0, '-', maxX);
+
+    // Disegna il bordo sinistro
+    for (int i = 1; i < maxY - 1; i++) {
+        mvaddch(i, 0, '|');   
+    }
+
+    // Disegna il bordo destro
+    for (int i = 1; i < maxY; i++) {
+        mvaddch(i, maxY * 3.97 - 1, '|');   
+    }
+
+    // Disegna gli angoli
+    mvaddch(0, 0, '+');
+    mvaddch(0, maxX - 1, '+');
+    mvaddch(maxY - 1, 0, '+');
+    mvaddch(maxY - 1, maxX - 1, '+');
 }
