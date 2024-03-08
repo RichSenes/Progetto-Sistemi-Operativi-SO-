@@ -126,7 +126,7 @@ void draw_border () {
 
     // Disegna il bordo destro
     for (int i = 1; i < maxY; i++) {
-        mvaddch(i, maxY * 3.97 - 1, '|');   
+        mvaddch(i, maxY * 4.32, '|');   
     }
 
     // Disegna gli angoli
