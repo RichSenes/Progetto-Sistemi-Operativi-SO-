@@ -11,8 +11,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define MIN_WIDTH 140
-#define MIN_HEIGHT 140
+#define MIN_WIDTH 60
+#define MIN_HEIGHT 20
 
 typedef struct {
     int x_left, x_right, y_up, y_down;
@@ -35,8 +35,5 @@ typedef struct enemy {
 typedef struct {
     int x, y;
 } ScreenSize;
-
-extern ScreenSize screen, hud_screen;
-extern int enemy_rows;
 
 #endif

@@ -128,17 +128,17 @@ char *game_title[] = {
 };
 
 void draw_game_title (ScreenSize screen) {
-    mvprintw(screen.y / 7 + 0,  screen.x / 1.5 - 49, " _____ ____   ___   ____  ____ _____ ____  ____      ");
-    mvprintw(screen.y / 7 + 1,  screen.x / 1.5 - 49, "|  ___|  _ \\ / _ \\ / ___|/ ___| ____|  _ \\/ ___|  ");
-    mvprintw(screen.y / 7 + 2,  screen.x / 1.5 - 49, "| |_  | |_) | | | | |  _| |  _|  _| | |_) \\___ \\   ");
-    mvprintw(screen.y / 7 + 3,  screen.x / 1.5 - 49, "|  _| |  _ <| |_| | |_| | |_| | |___|  _ < ___) |    ");
-    mvprintw(screen.y / 7 + 4,  screen.x / 1.5 - 49, "|_|   |_| \\_\\\\___/ \\____|\\____|_____|_| \\_\\____/  ");
-    mvprintw(screen.y / 7 + 5,  screen.x / 1.5 - 49, "                \\ \\   / / ___|                    ");
-    mvprintw(screen.y / 7 + 6,  screen.x / 1.5 - 49, "                 \\ \\ / /\\___ \\                    ");
-    mvprintw(screen.y / 7 + 7,  screen.x / 1.5 - 49, "                  \\ V /  ___) |                   ");
-    mvprintw(screen.y / 7 + 8,  screen.x / 1.5 - 49, "      ____  _      \\_/ |____/ _ _____ ____       ");
-    mvprintw(screen.y / 7 + 9,  screen.x / 1.5 - 49, "     |  _ \\| |      / \\  | \\ | |_   _/ ___|      ");
-    mvprintw(screen.y / 7 + 10, screen.x / 1.5 - 49, "     | |_) | |     / _ \\ |  \\| | | | \\___ \\      ");
-    mvprintw(screen.y / 7 + 11, screen.x / 1.5 - 49, "     |  __/| |___ / ___ \\| |\\  | | |  ___) |     ");
-    mvprintw(screen.y / 7 + 12, screen.x / 1.5 - 49, "     |_|   |_____/_/   \\_\\_| \\_| |_| |____/      ");
+    mvprintw(screen.y / 2 - 10, screen.x / 2 - 49/2, " _____ ____   ___   ____  ____ _____ ____  ____      ");
+    mvprintw(screen.y / 2 - 9,  screen.x / 2 - 49/2, "|  ___|  _ \\ / _ \\ / ___|/ ___| ____|  _ \\/ ___|  ");
+    mvprintw(screen.y / 2 - 8,  screen.x / 2 - 49/2, "| |_  | |_) | | | | |  _| |  _|  _| | |_) \\___ \\   ");
+    mvprintw(screen.y / 2 - 7,  screen.x / 2 - 49/2, "|  _| |  _ <| |_| | |_| | |_| | |___|  _ < ___) |    ");
+    mvprintw(screen.y / 2 - 6,  screen.x / 2 - 49/2, "|_|   |_| \\_\\\\___/ \\____|\\____|_____|_| \\_\\____/  ");
+    mvprintw(screen.y / 2 - 5,  screen.x / 2 - 49/2, "                \\ \\   / / ___|                    ");
+    mvprintw(screen.y / 2 - 4,  screen.x / 2 - 49/2, "                 \\ \\ / /\\___ \\                    ");
+    mvprintw(screen.y / 2 - 3,  screen.x / 2 - 49/2, "                  \\ V /  ___) |                   ");
+    mvprintw(screen.y / 2 - 2,  screen.x / 2 - 49/2, "      ____  _      \\_/ |____/ _ _____ ____       ");
+    mvprintw(screen.y / 2 - 1,  screen.x / 2 - 49/2, "     |  _ \\| |      / \\  | \\ | |_   _/ ___|      ");
+    mvprintw(screen.y / 2 - 0,  screen.x / 2 - 49/2, "     | |_) | |     / _ \\ |  \\| | | | \\___ \\      ");
+    mvprintw(screen.y / 2 + 1,  screen.x / 2 - 49/2, "     |  __/| |___ / ___ \\| |\\  | | |  ___) |     ");
+    mvprintw(screen.y / 2 + 2,  screen.x / 2 - 49/2, "     |_|   |_____/_/   \\_\\_| \\_| |_| |____/      ");
 }
